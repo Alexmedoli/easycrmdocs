@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Artigos em markdown',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/markdown.svg').default,
     description: (
       <>
        Artigos detalhando cada função, procedure e modelo re retorno API por página.
@@ -14,7 +14,7 @@ const FeatureList = [
   },
   {
     title: 'UML completa',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    Svg: require('@site/static/img/UMLcompleta.svg').default,
     description: (
       <>
          Visualize toda estrutura do Payload de cada página.
@@ -23,7 +23,7 @@ const FeatureList = [
   },
   {
     title: 'Endpoints',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/api.svg').default,
     description: (
       <>
         Tenha um painel das Endpoints de sua aplicação.

@@ -1,34 +1,34 @@
 ---
 id: OrderChart
-title: Propostas por mês
-sidebar_position: 5
+title: Order chart
+sidebar_position: 2
 tags: [Home, API, usuário, user, nome]
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# Propostas por mês
+# Monthly proposals
 
-## Método: OrderChart
+## Method: OrderChart
 --- 
 
 ![image.png](img/home-OrderChart.png)
 
-### Resumo
-Gráfico para resumo de vendas anual, com callback de elementos `date` e `value`.
+### Summary
+Chart for annual sales summary, with callback of `date` and `value` elements.
 
-## Sintaxe
+## Syntax
 ---
 <Tabs
-defaultValue="Função"
+defaultValue="Function"
 values={[
-  {label: 'Função', value:'Função' },
+  {label: 'Function', value:'Function' },
   {label: 'Interface', value:'interface' },
   {label: 'Schema', value:'Schema'}
 ]
 }>
-<TabItem value="Função">
+<TabItem value="Function">
 
 ```typescript title="src/pages/home/index.tsx"
 export function OrderChart() {
@@ -104,62 +104,23 @@ interface ISummary {
 </Tabs>
 
 
-## Descrição 
+## Description 
 ---
-A função `OrderChart` possui os elementos `deliveredOrders` (criado em `ISummary`) e a função `useState()` de atualização `setDeliveredOrders`. A função chama o valor de `loading` (criado em `Props`) e a atualiza seu state com a função `setLoading` com o gancho `useState`.
+The `OrderChart` function has the `deliveredOrders` element (created in `ISummary`) and the `useState()` update `setDeliveredOrders` function. The function calls the `loading` value (created in `Props`) and updates its state with the `setLoading` function with the `useState` hook.
 
-No caso das dados de `setDeliveredOrders` falharem em ser encontrados em `data.deliveredOrders` a função será setada em zero ou, no caso de falha no carregamento de `setLoading`. Independente do resultado, o valor de `setLoading` será  `false`.
+In case the `setDeliveredOrders` data fails to be found in `data.deliveredOrders` the function will be set to zero or, in case `setLoading` fails. Regardless of the result, the value of `setLoading` will be `false`.
 
-## Parâmetros
----
-
-Parâmetros |Requerimento|Tipo de dado  | definição|
----------|-----|----------|---------
- `loading` |Requerido|boolean \| null| booleano de carregamento
- `deliveredOrders` |Requerido|number \| undefined| Pedidos ou entregas realizadas nesta semana
- `label` |Não requerido|string| Texto para o rótulo do card
- `value` |Não requerido|string \| number| Valor para ser apresentado no card
- `proposalsAboutToExpire` |Não requerido|number \| undefined| Número de propostas a vencer na semana
- `finishedOrders` |Não requerido|number \| undefined| Número de pedidos finalizados na semana
-
-
-### Procedures
-### `???`
-
-Os parâmetros referidos seguem estas definições nas procedures do banco de dados:
-
-Parâmetros |Requerimento|Tipo de dado  
----------|-----|----------
- `???` |???|??? 
- `???`|???|???
- `???`|???|???
-
-## Valores de retorno
----
-Com o sucesso da função a recuração `Read_only`dos dados é recuperado no display da home page. No caso de ausência de valores, será apresentado o valor `0` nas três  lacunas
-
-
-<p></p>
-<table>
-<tr>
-    <td>Request</td>
-    <td>pages/User/Profile</td>
-</tr>
-<tr>
-    <td>Request Method</td>
-    <td>GET</td>
-</tr>
-<tr>
-    <td>Status Code:</td>
-    <td>200</td>
-</tr>
-</table>
-
-No caso de falha, alguma das mensagens de erro listadas serão apresentadas.
-
-## Errors
+## Parameters
 ---
 
-Nome do erro | Código de erro |Definição
----|---|---
-USER_NOT_FOUND| |Id do cliente não foi encontrada
+Parameters |Tipo de dado  | Data type|
+---------|----------|---------
+ `loading` |boolean \| null| boolean indicating loading process
+ `deliveredOrders` |number \| undefined| Weekly orders and deliveries
+ `label` |string| Title or label for the card
+ `value` |string \| number| Value to be displayed in the card
+ `proposalsAboutToExpire` |number \| undefined| Number of proposals to be overdue on the week
+ `finishedOrders` |number \| undefined| Weekly quantity of finalized orders
+
+
+

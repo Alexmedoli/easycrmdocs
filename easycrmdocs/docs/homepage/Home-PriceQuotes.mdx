@@ -1,34 +1,34 @@
 ---
 id: PriceQuotes
-title: Resumo de cotações
+title: Quotes summary
 sidebar_position: 3
-tags: [Home,API , resumo, cotação]
+tags: [Home,API , summary, quotes]
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-# PriceQuotes: resumo de cotações
+# PriceQuotes: summary of quotes
 
-## Método: PriceQuotes
+## Method: PriceQuotes
 --- 
 ![image.png](img/home-PriceQuotes.png)
 
-### Resumo
-Método de população de quatro parâmetros para <em>identificação, status, nome comercial e valor</em> para o quadro de resumo de quotações na Home-page.
+### Summary
+Four-parameter population method for `identification`, `status`, `comercial name` and `value` for the quotation summary table on the Home-page.
 
-## Sintaxe
+## Syntax
 ---
 <Tabs
-defaultValue="função"
+defaultValue="Function"
 values={[
-  {label: 'Função', value:'função' },
+  {label: 'Function', value:'Function' },
   {label: 'Interface', value:'interface' },
-  {label: 'Retorno', value:'retorno'},
+  {label: 'Response', value:'Response'},
   {label: 'Schema', value:'schema'}
 ]
 }>
-<TabItem value="função">
+<TabItem value="Function">
 
 ```typescript title="src/pages/home/components/PriceQuotes/index.tsx"
 
@@ -75,7 +75,7 @@ interface IPriceQuote {
 }
 ```
 </TabItem>
-<TabItem value="retorno">
+<TabItem value="Response">
 
 ```typescript title="src/pages/home/components/PriceQuotes/index.tsx"
 
@@ -163,22 +163,23 @@ A API dependerá da importação da rota `ROUTE_SELLER_DASHBOARD`
 ```
 :::
 
-## Descrição 
+## Description
 ---
-A função `PriceQuotes{}` tem um hook `useState` para os elementos do objeto `IPriceQuote`, utilizando os elementos `id`, `status`, `tradingName` e `value`.
+The `PriceQuotes{}` function has a `useState` hook to the `IPriceQuote` object elements, using the `id`, `status`, `tradingName`, and `value` elements.
 
-## Parâmetros
+## Parameters
 ---
-Parâmetros |Requerimento|Tipo de dado  | definição|
----------|-----|----------|---------
- `id` |Sim|number| código identificador de cliente
- `status`|Sim  | string | indicador de atividade
- `tradingName`| Não | string | nome comercial do cliente 
- `value`| Sim | number | valor da cotações
+
+Parameters |Data type  | Definition|
+---------|----------|---------
+ `id` |number| Identifying code for singular accounts
+ `status`| string | activity indicator
+ `tradingName` | string | Client's commercial alias 
+ `value`| number | Value of the quotes
 
 <p></p>
 
-:::info A variável 'status' aceitará apenas os valores `active`🟢 ou `inactive`🔴, cada um possuindo um color-code associado:
+:::info the 'status' variable will only accept the values `active`🟢 or `inactive`🔴, each having an associated color-code:
  
  **Status**|**Color code**|**Type**
  -----|-----|-----
@@ -188,41 +189,20 @@ Parâmetros |Requerimento|Tipo de dado  | definição|
 
 ### Procedures
 ### `PRC_RESU_COTA_CONS`
-Os parâmetros referidos seguem estas definições a partir do banco de dados:
+The referred parameters follow these database settings:
 
 Parâmetros |Requerimento|Tipo de dado  
 ---------|-----|----------
-`@ID_COTA_CLIEN` |Sim|INT
-`@IN_STAT`|Sim| BIT
-`@NM_COTA_CLIEN`|Sim|VARCHAR(100)
-`@NR_COTA_VALO`|Sim|MONEY
-`@UUID_USUA`|Sim|VARCHAR(36)
-`@UUID_VEND`|Sim|VARCHAR(36)
-
-## Valores de retorno
----
-PriceQuotes - Se a função for bem sucedida, os valores de `id` serão retornados acompanhados do `status`, `tradingName` e `value` associados ao cliente. 
-<p></p>
-<table>
-<tr>
-    <td>Request</td>
-    <td>/easy-crm/src/pages/home/components/PriceQuotes</td>
-</tr>
-<tr>
-    <td>Request Method</td>
-    <td>GET</td>
-</tr>
-<tr>
-    <td>Status Code:</td>
-    <td>200</td>
-</tr>
-</table>
-
-No caso de falha, alguma das mensagens de erro listadas serão apresentadas.
+`@ID_COTA_CLIEN` |true|INT
+`@IN_STAT`|true| BIT
+`@NM_COTA_CLIEN`|true|VARCHAR(100)
+`@NR_COTA_VALO`|true|MONEY
+`@UUID_USUA`|true|VARCHAR(36)
+`@UUID_VEND`|true|VARCHAR(36)
 
 ## Errors
 ---
 
-Nome do erro | Código de erro |Definição
+Error title | Error code |Definition
 ---|---|---
-ID_NOT_FOUND| |Id do cliente não foi encontrada
+ID_NOT_FOUND| |Client's ID could not be found

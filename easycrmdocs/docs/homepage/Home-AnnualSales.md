@@ -1,7 +1,7 @@
 ---
 id: AnnualSales
-title: Resumo anual de vendas
-sidebar_position: 4
+title: Sales summary
+sidebar_position: 1
 tags: [Home, API, vendas, anual]
 ---
 
@@ -10,30 +10,26 @@ import TabItem from '@theme/TabItem';
 import Mermaid from '@site/src/theme/Mermaid';
 
 
-# AnnualSales: resumo anual de vendas
+# AnnualSales: annual sales summary
 
-## Método: AnnualSales
+## Method: AnnualSales
 --- 
 ![image.png](img/home-AnnualSales.png)
 
+### Summary
+Chart for monthly Sales summary ilustrating fluctuations over a semester. Callsbacks for `date` and `value` elements.
 
-
-
-### Resumo
-Gráfico para resumo de vendas anual, com callback de elementos `date` e `value`.
-
-
-## Sintaxe
+## Syntax
 ---
 <Tabs
-defaultValue="Função"
+defaultValue="Function"
 values={[
-  {label: 'Função', value:'Função' },
+  {label: 'Function', value:'Function' },
   {label: 'Interface', value:'interface' },
   {label: 'Schema', value:'Schema'}
 ]
 }>
-<TabItem value="Função">
+<TabItem value="Function">
 
 ```typescript title="src/pages/Home/components/SalesChart/index.tsx"
 
@@ -120,59 +116,28 @@ interface IAnnualSales {
 </TabItem>
 </Tabs>
 
-## Descrição 
+## Desciption 
 ---
-A função `SalesChart()` leva um hook `useState()` para construir os elementos`annualSales` e `setAnnualSales` a partir dos valores de `date` e `value` no objeto `IAnnualSales{}`
+The `SalesChart()` function takes a `useState()` hook to construct the `annualSales` and `setAnnualSales` elements from the `date` and `value` values in the `IAnnualSales{}` object
 
-
-
-
-
-## Parâmetros
+## Parameters
 ---
-Parâmetros |Requerimento|Tipo de dado  | definição|
+Parameters | Data type | Definition|
 ---------|-----|----------|---------
- `date` |Não|number| Período de tempo em que o pedido foi realizado
- `value`|Não|number| Número de pedidos realizados no período 
+ `date` |number| Período de tempo em que o pedido foi realizado
+ `value`|number| Número de pedidos realizados no período 
 
 
 ### Procedures
 ### `PRC_VEND_GRAF_CONS`
-Os parâmetros referidos seguem estas definições a partir do banco de dados:
+The referred parameters follow these database settings:
 
-Parâmetros |Requerimento|Tipo de dado  
+Parameters |Requirement| Data type  
 ---------|-----|----------
-`@DT_VEND` |Sim|DATE
-`@NM_VEND_DATA`|Sim|INT
-`@NR_PAGE_INIC`|Sim| INT
-`@UUID_USUA`|Sim|VARCHAR(36)
-`@UUID_VEND`|Sim|VARCHAR(36)
+`@DT_VEND` |true|DATE
+`@NM_VEND_DATA`|true|INT
+`@NR_PAGE_INIC`|true| INT
+`@UUID_USUA`|true|VARCHAR(36)
+`@UUID_VEND`|true|VARCHAR(36)
 
 
-## Valores de retorno
----
-Com o sucesso da função a recuração `Read_only`dos dados é recuperado no display da home page. Um valor vazio não não gerará erro, contudo, não deverá apresentado em gráfico
-
-
-<table>
-  <tr>
-    <td>Request</td>
-    <td>/easy-crm/src/pages/home/components/SalesChart</td>
-  </tr>
-  <tr>
-    <td>Request Method</td>
-    <td>GET</td>
-  </tr>
-  <tr>
-    <td>Status Code:</td>
-    <td>200</td>
-  </tr>
-</table>
-
-No caso de falha, alguma das mensagens de erro listadas serão apresentadas.
-
-## Errors
----
-Nome do erro | Código de erro |Definição
----|---|---
-?????|?????|?????

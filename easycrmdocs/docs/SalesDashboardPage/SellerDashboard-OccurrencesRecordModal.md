@@ -1,6 +1,6 @@
 ---
 id: OccurencesRecordModal
-title: Modal de Registro de Ocorrências
+title: Occcurrences Record Modal
 sidebar_position: 1
 stoplight-id: iov2t3xbqawx4
 tags: [Mocks, dashboard, seller, vendedor]
@@ -10,26 +10,26 @@ import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
 # Registro de Ocorrências - modal
-## Método: OccurrencesRecordModal 
+## Method: OccurrencesRecordModal 
 ___
 
 ![image.png](img/OccurrencesRecordModal.png)
 
 
 
-## Sintaxe
+## Syntax
 ____
 
-Com o erro ou falha da função, o resultado é setado como `undefined`.
+In case of error, the result will be set as `undefined`.
 
-<Tabs defaultValue="Função"
+<Tabs defaultValue="Function"
 values={[
-  {label:  'Função', value:'Função' },
+  {label:  'Function', value:'Function' },
   {label:  'Interface', value:'interface' },
-  {label:  'Retorno', value:'retorno'}
+  {label:  'Response', value:'Response'}
   ]
 }>
-<TabItem  value="Função">
+<TabItem  value="Function">
 
 ```typescript title="src/pages/Seller/Dashboard/components/OccurrencesRecord/Modal\index.tsx"
 
@@ -117,7 +117,7 @@ interface Props {
 
 </TabItem>
 
-<TabItem value="retorno">
+<TabItem value="Response">
 
 ```typescript  title="src/pages/Seller/Dashboard/components/OccurrencesRecord/Modal/index.tsx"
 const res: Props = {
@@ -143,58 +143,22 @@ const res: Props = {
 
 </Tabs>
 
-## Descrição
-A função `OccurrencesRecordModal{}` ativada com clique no gráfico de registro de ocorrências, utiliza o hook `useState()`  retomando os elementos de `IOccurenceRecord` aplicando os valores `result` e `setResult`.
+## Description
+The `OccurrencesRecordModal{}` function, activated by clicking on the occurrence record graph, uses the `useState()` hook to take over the `IOccurrencesRecord` elements by applying the `result` and `setResult` values.
 
-Com o erro ou falha da função, o resultado é setado como `undefined`.
+Upon error or failure of the function, the result is set to `undefined`.
 
-## Parâmetros
+## Parameters
+------------
 
-Parâmetros |Requerimento|Tipo de dado  | definição|
+Parameters |Data type  | Definition|
 ---------|-----|----------|---------
-`customerId`|Requerido|number | Número de identificação do cliente
-`companyName`|Requerido|string | Nome da companhia envolvida na ocorrência
-`OccurenceId`|Requerido|number | Número de identificação da ocorrência
-`invoicingId`|Requerido|number | Número de identificação do boleto/cobrança
-`officeName`|Requerido|string | Nome do escritório envolvido na ocorrência
-`creationDate`|Requerido|string | Data de criação da ocorrência
-`occurrenceName`|Requerido|string | Nome da ocorrência 
+`customerId`|number | Identification code for the costumer
+`companyName`|string | Name of the company envolved with the occurrence
+`OccurenceId`|number | Identification code for the occurrence
+`invoicingId`|number | Identification code for the invoice
+`officeName`|string | Name of the office envolved with the occurrence
+`creationDate`|string | Occurrence's date of creation
+`occurrenceName`|string | Name for the occurence 
 
 
-
-## Procedures
-### `????_????_????_????`
-Os parâmetros referidos seguem estas definições nas procedures do banco de dados:
-Parâmetros |Requerimento|Tipo de dado  
----------|-----|----------
- `???` |???|??? 
- `???`|???|???
- `???`|???|???
-
-
-## Valores de retorno
-Com o sucesso da função a recuração `Read_only`dos dados é recuperado no display da home page. Um valor vazio não não gerará erro, contudo, não deverá apresentado em gráfico
-
-<p></p>
-<table>
-<tr>
-    <td>Request</td>
-    <td>components/Rules/Customer/Modal/Details</td>
-</tr>
-<tr>
-    <td>Request Method</td>
-    <td>GET</td>
-</tr>
-<tr>
-    <td>Status Code:</td>
-    <td>200</td>
-</tr>
-</table>
-
-No caso de falha, alguma das mensagens de erro listadas serão apresentadas.
-
-## Errors
-
-Nome do erro | Código de erro |Definição
----|---|---
-?????|?????|?????
