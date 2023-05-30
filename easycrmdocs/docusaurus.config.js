@@ -18,7 +18,7 @@ const config = {
   // If you aren't using GitHub pages, you don't need these.
   organizationName: 'Alexmedoli', // Usually your GitHub org/user name.
   projectName: 'easycrmdocs', // Usually your repo name.
-  deploymentBranch: "main",
+  deploymentBranch: "gh-pages",
   themeConfig:{
   },
 
