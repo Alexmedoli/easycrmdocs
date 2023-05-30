@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkeasycrmdocs=self.webpackChunkeasycrmdocs||[]).push([[9235],{1428:e=>{e.exports=JSON.parse('{"permalink":"/easycrmdocs/blog/tags/hello","page":1,"postsPerPage":10,"totalPages":1,"totalCount":2,"blogDescription":"Blog","blogTitle":"Blog"}')}}]);
