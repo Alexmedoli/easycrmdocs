@@ -8,7 +8,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 const config = {
   title: 'MTCorp docs',
   tagline: 'Welcome to the MTCorp documentation hub.',
-  url: 'https://alexmedoli.github.io/easycrmdocs/',
+  url: 'https://github.com',
   baseUrl: '/easycrmdocs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
