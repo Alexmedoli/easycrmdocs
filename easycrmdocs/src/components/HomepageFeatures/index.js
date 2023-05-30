@@ -8,7 +8,7 @@ const FeatureList = [
     Svg: require('@site/static/img/markdown.svg').default,
     description: (
       <>
-       Artigos detalhando cada função, procedure e modelo re retorno API por página.
+       Articles detailing each function, procedure and API return model per page.
       </>
     ),
   },
@@ -17,7 +17,7 @@ const FeatureList = [
     Svg: require('@site/static/img/UMLcompleta.svg').default,
     description: (
       <>
-         Visualize toda estrutura do Payload de cada página.
+         View the entire payload structure of each page.
       </>
     ),
   },
@@ -26,7 +26,7 @@ const FeatureList = [
     Svg: require('@site/static/img/api.svg').default,
     description: (
       <>
-        Tenha um painel das Endpoints de sua aplicação.
+        Have a dashboard of all your application Endpoints.
       </>
     ),
   },

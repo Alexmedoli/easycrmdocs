@@ -7,7 +7,7 @@ const darkCodeTheme = require('prism-react-renderer/themes/dracula');
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'MTCorp docs',
-  tagline: 'Bem vindo à nossa documentação de desenvolvimento',
+  tagline: 'Welcome to the MTCorp documentation hub.',
   url: 'https://your-docusaurus-test-site.com',
   baseUrl: '/',
   onBrokenLinks: 'throw',
@@ -74,7 +74,7 @@ const config = {
             type: 'doc',
             docId: 'intro',
             position: 'left',
-            label: 'Documentação',
+            label: 'Documentation',
           },
           //{
             //to:'blog', label:'Gráficos', position: 'left'

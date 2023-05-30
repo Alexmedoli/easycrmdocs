@@ -22,13 +22,6 @@ function HomepageHeader() {
           </Link>
           
         </div>
-        <div>
-          <Link
-            className="button button--secondary button--lg"
-            to="/graphs/index">
-            Outros Docs da MTCorp
-          </Link>
-        </div>
       </div>
     </header>
   );
