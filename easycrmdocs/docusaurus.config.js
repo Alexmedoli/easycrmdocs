@@ -9,7 +9,7 @@ const config = {
   title: 'MTCorp docs',
   tagline: 'Welcome to the MTCorp documentation hub.',
   url: 'https://alexmedoli.github.io/easycrmdocs/',
-  baseUrl: '/',
+  baseUrl: '/easycrmdocs/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
   favicon: 'img/MTCorpLogo.png',
