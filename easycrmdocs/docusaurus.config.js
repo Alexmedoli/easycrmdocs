@@ -16,8 +16,9 @@ const config = {
 
   // GitHub pages deployment config.
   // If you aren't using GitHub pages, you don't need these.
-  organizationName: 'Alexandre Medeiros', // Usually your GitHub org/user name.
-  projectName: 'Documentation sample', // Usually your repo name.
+  organizationName: 'Alexmedoli', // Usually your GitHub org/user name.
+  projectName: 'easycrmdocs', // Usually your repo name.
+  deploymentBranch: "main",
   themeConfig:{
   },
 
