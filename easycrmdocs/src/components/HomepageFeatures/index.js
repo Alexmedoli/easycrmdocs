@@ -4,7 +4,7 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    title: 'Artigos em markdown',
+    title: 'Articles in markdown',
     Svg: require('@site/static/img/markdown.svg').default,
     description: (
       <>
@@ -13,7 +13,7 @@ const FeatureList = [
     ),
   },
   {
-    title: 'UML completa',
+    title: 'Complete UML',
     Svg: require('@site/static/img/UMLcompleta.svg').default,
     description: (
       <>
