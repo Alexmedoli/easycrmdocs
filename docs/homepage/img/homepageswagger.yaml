@@ -1,0 +1,81 @@
+---
+openapi: 3.0.0
+info:
+  title: API Documentation
+  version: 1.0.0
+servers:
+- url: https://virtserver.swaggerhub.com/Alexmedoli/EasyCRMdocs/1.0.0
+  description: SwaggerHub API Auto Mocking
+paths:
+  /annual-sales:
+    get:
+      summary: Get annual sales data
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AnnualSales'
+  /order-chart:
+    get:
+      summary: Get order chart data
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/Orderchart'
+  /price-quotes:
+    get:
+      summary: Get price quotes
+      responses:
+        "200":
+          description: Successful response
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PriceQuotes'
+components:
+  schemas:
+    AnnualSales:
+      type: object
+      properties:
+        date:
+          type: number
+          format: date
+          readOnly: true
+        value:
+          minimum: 0
+          type: number
+          format: double
+          readOnly: true
+          default: 0
+    Orderchart:
+      type: object
+      properties:
+        deliveredOrders:
+          minimum: 0
+          type: number
+          format: float
+        loading:
+          type: boolean
+    PriceQuotes:
+      type: object
+      properties:
+        id:
+          minimum: 0
+          type: integer
+          readOnly: true
+        status:
+          pattern: (?:^|\W)active|inactive(?:$|\W)
+          type: string
+        tradingName:
+          pattern: "[A-Za-z ]+"
+          type: string
+        value:
+          minimum: 0
+          type: number
+          format: double
+          readOnly: true
