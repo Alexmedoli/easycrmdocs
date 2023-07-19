@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_website=self.webpackChunkmy_website||[]).push([[76],{4120:e=>{e.exports=JSON.parse('{"label":"user","permalink":"/easycrmdocs/docs/tags/user","allTagsPath":"/easycrmdocs/docs/tags","count":1,"items":[{"id":"homepage/OrderChart","title":"Order chart","description":"Method: OrderChart","permalink":"/easycrmdocs/docs/homepage/OrderChart"}]}')}}]);
